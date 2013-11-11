@@ -44,19 +44,25 @@ namespace ConvertirPesosaDolares
 
 				//Calcular
 
-				dolar = peso * cam;
+				dolar = peso / cam;
 				
 				//Compara si es un 0
 				
 				if(dolar == 0){
-					MessageBox.Show("No se puede convertir: "+ dolar);
+					MessageBox.Show("No se puede convertir ");
+				}else if(peso == 0){
+					MessageBox.Show("No se puede convertir ");
+				}else if(cam == 0){
+					MessageBox.Show("No se puede convertir ");
 				}else{
 					MessageBox.Show("La cantidad en Dolares es: "+ dolar);
+					textBox3.Text = dolar.ToString();
 				}
+				
 
 				// Nos Musrtra  Resultados
 
-				textBox3.Text = dolar.ToString();
+				
 				
 			// Capta la Exception
 			
